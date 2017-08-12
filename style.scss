@@ -1,0 +1,134 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック",
+YuGothic,
+"メイリオ",
+Verdana,
+"Hiragino Kaku Gothic ProN",
+Meiryo,
+sans-serif;
+
+/* Base
+------------------------------------------------------------*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+}
+
+// colors
+$baseColor: #cccccc;
+$baseColor2: #edeaea;
+
+/* Font
+------------------------------------------------------------*/
+
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Contents
+------------------------------------------------------------*/
+
+.box {
+  background-image: url(img/responsive.png);
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+#top {
+
+  h1 {
+    padding: 30px 0;
+    @extend .abel;
+    font-size: 3.2rem;
+    text-align: center;
+    @extend .uppercase;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .box1 {
+      flex: 1;
+      border: solid 1px;
+      margin: 10px 10px;
+
+      h3 {
+        text-align: center;
+        @extend .abel;
+        line-height: 2em;
+        background-color: $baseColor2;
+        @extend .uppercase;
+      }
+
+      p {
+        text-align: center;
+        @extend .abel;
+        line-height: 6em;
+        background-color: $baseColor;
+        @extend .uppercase;
+      }
+    }
+  }
+}
+
+
+.bottom {
+  background-color: $baseColor2;
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+  margin: 30px 0 0 0;
+  padding: 30px;
+  text-align: center;
+
+  h3 {
+    text-align: center;
+    @extend .abel;
+    line-height: 2em;
+    background-color: $baseColor2;
+    @extend .uppercase;
+  }
+
+  .button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    text-decoration: none;
+    font-size: 2rm;
+    display: block;
+    color: black;
+    @extend .abel;
+    background-color: $baseColor;
+    border-radius: 5px;
+    text-align: center;
+    @extend .uppercase;
+  }
+  
+}
+
+@media (max-width: 768px) {
+#top {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+ }
+}
